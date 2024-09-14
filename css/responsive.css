@@ -1,0 +1,63 @@
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    body {
+        min-height: 1000px;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-slide img {
+        max-width: 100%;
+        /* As imagens ocupam toda a largura do container */
+    }
+
+    .prev,
+    .next {
+        font-size: 18px;
+        /* Tamanho reduzido para telas menores */
+        padding: 10px;
+        /* Ajuste o padding para botões menores */
+    }
+
+    .prev {
+        left: 5px;
+        /* Mais próximo da borda em telas menores */
+    }
+
+    .next {
+        right: 5px;
+    }
+
+    .certificados {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .certificado {
+        max-width: 100%;
+        width: 90%;
+        /* Ajuste para garantir que as imagens ocupem boa parte da largura */
+        margin: 0.5rem 0;
+    }
+
+    .galeria {
+        flex-direction: column;
+    }
+
+    .redes-sociais {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-sociais a {
+        margin: 1rem 0;
+    }
+}

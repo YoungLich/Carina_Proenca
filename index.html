@@ -8,16 +8,17 @@
     <title>Carina Proença</title>
     <link rel="icon" type="icon/png" href="image/icon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#formacoes">Formações</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre" class="list">Sobre</a></li>
+                <li><a href="#portfolio" class="list">Portfólio</a></li>
+                <li><a href="#formacoes" class="list">Certificados</a></li>
+                <li><a href="#contato" class="list">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -26,29 +27,27 @@
     <section id="sobre" class="section">
         <div class="centralizado">
             <img src="image/Carina.png" alt="Foto da Cabeleireira" class="foto-principal">
-            <h1>Carina Dias Proença</h1>
+            <h1>Carina Dias de Proença</h1>
             <p>Transforme seus cachos em uma obra-prima: descubra o verdadeiro
                 potencial dos seus cabelos com um toque de especialista.</p>
         </div>
     </section>
 
-    <!-- Section de formações -->
-    <section id="formacoes" class="section">
-        <h2>Formações</h2>
-        <div class="certificados">
-            <img src="certificado1.jpg" alt="Certificado 1" class="certificado">
-            <img src="certificado2.jpg" alt="Certificado 2" class="certificado">
-            <img src="certificado3.jpg" alt="Certificado 3" class="certificado">
-        </div>
-    </section>
-
     <!-- Section do portfólio de cortes -->
     <section id="portfolio" class="section">
-        <h2>Portfólio de Cortes</h2>
-        <div class="galeria">
-            <img src="corte1.jpg" alt="Corte 1">
-            <img src="corte2.jpg" alt="Corte 2">
-            <img src="corte3.jpg" alt="Corte 3">
+        <h2>Portfólio</h2>
+        <div class="carousel-container">
+            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="image/foto1.png" class="pessoas" alt="Corte 1">
+                    <img src="image/foto2.png" class="pessoas" alt="Corte 2">
+                    <img src="image/foto3.png" class="pessoas" alt="Corte 3">
+                    <img src="image/foto4.png" class="pessoas" alt="Corte 4">
+                    <img src="image/foto5.png" class="pessoas" alt="Corte 5">
+                </div>
+            </div>
+            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
         </div>
         <div class="video">
             <h3>Veja o vídeo de um dos nossos cortes</h3>
@@ -59,33 +58,48 @@
         </div>
     </section>
 
+    <!-- Section de certificados -->
+    <section id="formacoes" class="section">
+        <h2>Certificados</h2>
+        <div class="certificados">
+            <img src="/image/Certificado-1.png" alt="Certificado 1" class="certificado">
+            <img src="/image/Certificado-2.png" alt="Certificado 2" class="certificado">
+            <img src="/image/Certificado-3.png" alt="Certificado 3" class="certificado">
+            <img src="/image/Certificado-4.png" alt="Certificado 4" class="certificado">
+            <img src="/image/Certificado-5.png" alt="Certificado 5" class="certificado">
+        </div>
+    </section>
+
     <!-- Section de redes sociais -->
     <section id="contato" class="section">
         <h2>Redes Sociais</h2>
         <div class="redes-sociais">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="instagram-icon.png" alt="Instagram">
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-                <img src="linkedin-icon.png" alt="LinkedIn">
-            </a>
+            <div class="social-item">
+                <a href="https://www.instagram.com/eucarinaproenca/" target="_blank">
+                    <img src="image/Insta-1.png" alt="Instagram" class="redes">
+                </a>
+                <p>@eucarinaproenca</p>
+            </div>
+            <div class="social-item">
+                <a href="https://www.instagram.com/carinaproencacachos/" target="_blank">
+                    <img src="image/Insta-2.png" alt="Instagram" class="redes">
+                </a>
+                <p>@carinaproencacachos</p>
+            </div>
+            <div class="social-item">
+                <a href="mailto:cachoscarina@gmail.com" target="_blank">
+                    <img src="image/gmail.png" alt="Gmail" class="gmail">
+                </a>
+                <p>cachoscarina@gmail.com</p>
+            </div>
         </div>
-        <!-- Formulário de contato com API de e-mail -->
-        <h3>Envie uma mensagem</h3>
-        <form id="form-contato">
-            <label for="email">Seu E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensagem">Sua Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
     </section>
 
     <footer>
-        <p>&copy; 2024 Todos os direitos reservados.</p>
+        <p>Copyright &copy; 2024 Todos os direitos reservados.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

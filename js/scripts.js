@@ -1,29 +1,29 @@
-document.getElementById('form-contato').addEventListener('submit', async function (e) {
-    e.preventDefault();
+let currentSlide = 0;
 
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
+function moveCarousel(direction) {
+    const carouselSlide = document.querySelector('.carousel-slide');
+    const slides = document.querySelectorAll('.carousel-slide img');
+    const totalSlides = slides.length;
 
-    const data = {
-        email: email,
-        mensagem: mensagem
-    };
+    // Muda o slide atual
+    currentSlide += direction;
 
-    try {
-        const response = await fetch('https://api.example.com/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        if (response.ok) {
-            alert('E-mail enviado com sucesso!');
-        } else {
-            alert('Ocorreu um erro ao enviar o e-mail.');
-        }
-    } catch (error) {
-        alert('Erro de conexão.');
+    // Limites do carrossel (volta para o início ou fim)
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
     }
-});
+
+    // Define o slide atual como "ativo"
+    slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+        if (index === currentSlide) {
+            slide.classList.add('active');
+        }
+    });
+
+    // Move o carrossel para a imagem atual com efeito de transição 3D
+    const slideWidth = slides[0].clientWidth;
+    carouselSlide.style.transform = `translateX(${-slideWidth * currentSlide}px) rotateY(0deg)`;
+}
