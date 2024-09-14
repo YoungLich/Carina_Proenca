@@ -225,6 +225,29 @@ nav ul li a {
     width: 200px;
 }
 
+/* Estilos do botão de voltar ao topo */
+#back_to_top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: #cecbcb;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 30%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    display: none;
+    /* O botão só aparecerá quando o usuário rolar a página */
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+#back_to_top:hover {
+    background-color: #c930e4;
+}
+
 /* Estilos do footer */
 footer {
     text-align: center;

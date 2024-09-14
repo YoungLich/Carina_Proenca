@@ -27,3 +27,21 @@ function moveCarousel(direction) {
     const slideWidth = slides[0].clientWidth;
     carouselSlide.style.transform = `translateX(${-slideWidth * currentSlide}px) rotateY(0deg)`;
 }
+
+// Mostrar o botão quando o usuário rolar para baixo
+window.onscroll = function () {
+    const button = document.getElementById('back_to_top');
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+};
+
+// Função para rolar para o topo
+document.getElementById('back_to_top').addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
