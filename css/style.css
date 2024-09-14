@@ -13,11 +13,20 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background: linear-gradient(to right, #e0b9e7, #bdb1c4);
+    padding-top: 80px;
+    /* Espaço para o cabeçalho fixo */
 }
 
 header {
     background-color: #333;
     padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    /* Garantir que o cabeçalho fique acima do conteúdo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Adiciona sombra para destacar o cabeçalho */
 }
 
 nav ul {
