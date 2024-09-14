@@ -7,6 +7,8 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* Define a altura do seu cabeçalho fixo */
 }
 
 body {
@@ -55,10 +57,12 @@ nav ul li a {
 
 .section {
     padding: 2rem;
+    min-height: 500px;
     text-align: center;
 }
 
 .centralizado {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,8 +75,8 @@ nav ul li a {
 .foto-principal {
     border: 2px groove gray;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .389);
-    border-radius: 10%;
-    width: 260px;
+    border-radius: 50%;
+    width: 200px;
     object-fit: cover;
     margin-bottom: 1rem;
 }
@@ -195,6 +199,7 @@ nav ul li a {
 }
 
 .redes-sociais {
+    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
